@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <style>
+        main {
+            min-height: 700px; /* Минимальная высота */
+            max-width: 800px; /* Максимальная ширина */
+            margin: 0 auto; /* Центрирование горизонтально */
+            padding: 20px; /* Отступы внутри элемента */
+        }
+        .custom-div {
+            background: linear-gradient(135deg,  #c9de96 0%,#8ab66b 67%,#398235 100%);
+        }
+        .custom-center {
+            align-items: center
+        }
+        .custom-div_image_1 {
+            background: url('../static/images/photo_5406577988839003480_y.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <title>{{title}}</title>
+</head>
+<body>
+{% if bg == "img" %}
+<div class="custom-div_image_1">
+{% else %}
+<div class="custom-div">
+{% endif %}
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+        {% block content %}{% endblock %}
+    </main>
+</div>
+{% if isMain == "isMain" %}
+    <main role="main" class="container">
+        <div align="center">
+
+        <img src="/static/images/photo_5406577988839003456_y.jpg" style="width: 300px; height: 300px">
+            <img src="/static/images/photo_5406577988839003467_y.jpg" style="width: 300px; height: 300px">
+            <img src="/static/images/photo_5406577988839003471_y.jpg" style="width: 300px; height: 300px">
+            <br>
+            <br>
+            <img src="/static/images/photo_5406577988839003480_y.jpg" style="width: 300px; height: 300px">
+            <img src="/static/images/photo_5406577988839003481_y.jpg" style="width: 300px; height: 300px">
+            <img src="/static/images/photo_5406577988839003482_y.jpg" style="width: 300px; height: 300px">
+
+            <ul style="list-style-type: none; margin-top: 50px;">
+                <li><h4>Гарантийное бесплатное обслуживание</h4></li>
+                <li><h4>Короткие сроки монтажа систем автополива</h4></li>
+                <li><h4>Профессионализм, гибкость и индивидуальный подход</h4></li>
+            </ul>
+        </div>
+
+        <div align="center" style="margin: 50px">
+            <video style="" height="300" width="200" controls="controls" poster="/static/videos/document_5406577988382769970.mp4">
+               <source src="/static/videos/document_5406577988382769970.mp4">
+            </video>
+            <video height="300" width="200" controls="controls" poster="/static/videos/document_5406577988382769970.mp4">
+               <source src="/static/videos/document_5406577988382769988.mp4">
+            </video>
+        </div>
+    </main>
+{% endif %}
+<footer>
+    <div class="custom-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4></h4>
+                    <h4>vodopoliv.pro</h4>
+                </div>
+                <!-- Другие контакты или ссылки могут быть добавлены здесь -->
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

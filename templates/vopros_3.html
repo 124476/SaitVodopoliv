@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Рассчет цены</title>
+    <style>
+        .outer {
+          display: table;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
+        .middle {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .inner {
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+          /* Whatever width you want */
+        }
+    </style>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="outer">
+    <div class="middle">
+        <div class="inner">
+            <h4 style="color: white">Полив необходим для:</h4>
+            <label style="color: white;"><input type="checkbox" name="t8"> Газан</label><br>
+            <label style="color: white;"><input type="checkbox" name="t8"> Цветник</label><br>
+            <label style="color: white;"><input type="checkbox" name="t8"> Теплица</label><br>
+            <label style="color: white;"><input type="checkbox" name="t8"> Огород</label><br>
+            <a href="/vopros_4"
+               style="color:white; background-color:blue; margin: 250px;
+               padding-left: 50px; padding-right: 50px; padding-top: 5px; padding-bottom: 5px;
+                border-radius: 25px;">Следующий</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>

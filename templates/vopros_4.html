@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Рассчет цены</title>
+    <style>
+        .outer {
+          display: table;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
+        .middle {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .inner {
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+          /* Whatever width you want */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="outer">
+    <div class="middle">
+        <div class="inner">
+            <h4 style="color: white">Площадь участка в 100 м² (ориентировочная):</h4>
+            <form action="" method="post">
+                <label style="color: white; border-radius: 25px;"><input type="number" name="count" required></label><br>
+                <input type="submit" value="Рассчет"
+                   style="color:white; background-color:blue; margin-left: 200px;
+                   padding-left: 50px; padding-right: 50px; padding-top: 5px; padding-bottom: 5px;
+                    border-radius: 25px;">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
